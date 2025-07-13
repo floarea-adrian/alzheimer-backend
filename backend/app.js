@@ -9,7 +9,8 @@ const { verifyToken } = require('./controllers/authMiddleware');
 const app = express();
 
 // Stabilim portul pe care va rula serverul
-const port = 5000;
+const port = process.env.PORT || 5000;
+
 
 // Importăm și folosim variabilele din fișierul .env (pentru baza de date, parola etc.)
 require('dotenv').config();
@@ -43,6 +44,10 @@ app.use(cors({
 
 // Legăm rutele de o cale (temporar comentat)
 app.use('/api/users', userRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Alzheimer API funcționează!');
+});
 
 // Pornim serverul
 app.listen(port, () => {
