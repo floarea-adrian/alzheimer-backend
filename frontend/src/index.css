@@ -1,0 +1,10 @@
+/* 
+@import "tailwindcss"; */
+body {
+  @apply font-sans bg-gray-900 text-white;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

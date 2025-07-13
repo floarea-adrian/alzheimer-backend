@@ -1,0 +1,11 @@
+# Ignoră directoare de build și fișiere temporare
+node_modules/
+.vscode/
+.env
+.venv/
+.venv310/
+__pycache__/
+*.pyc
+*.log
+frontend/build/
+electron_app/
