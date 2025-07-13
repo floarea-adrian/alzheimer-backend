@@ -15,6 +15,10 @@ router.get("/istoric", protectie, getIstoricTeste); // pentru pacient
 router.get("/istoric/:id_pacient", verifyToken, allowRoles('medic'), testController.getIstoricPacient);
 router.get("/raspunsuri/:id_test", protectie, getRaspunsuriTest);
 router.post("/teste", salveazaTest);
+router.get('/ping', (req, res) => {
+  res.json({ message: "API-ul este online și funcționează!" });
+});
+
 
 
 module.exports = router;
