@@ -51,7 +51,7 @@ app.listen(port, () => {
 
 
 
-app.use('/api/teste', testRoutes);
+app.use('/api', testRoutes);
 app.use("/api/fisa", fisaRoutes);
 
 //avatar//
