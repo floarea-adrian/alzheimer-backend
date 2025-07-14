@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
-const { getListaPacienti  } = require("../controllers/testController");
 const {  getUserById } = require('../controllers/userController');
 const { protectie } = require('../controllers/authMiddleware');
 const { getUserProfile, updateUserProfile } = require("../controllers/userController");
@@ -10,6 +9,7 @@ const {
   adaugaPacientLaMedic,
   eliminaPacientDeLaMedic,
 } = require("../controllers/userController");
+const { loginUser } = require('../controllers/userController');
 
 
 
