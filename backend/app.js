@@ -17,7 +17,7 @@ require('dotenv').config();
 
 // Vom adăuga rutele (temporar e comentat, pentru că încă nu le-am creat)
 const userRoutes = require('./routes/userRoutes');
-const allowedOrigins = ['http://localhost:3000', 'http://192.168.1.136:3000'];
+const allowedOrigins = ['http://localhost:3000', 'http://192.168.1.136:3000', 'https://alzheimer-frontend.onrender.com'];
 const chatRoutes = require("./routes/chatRoutes");
 
 // const verificaAutentificare = require('./middleware/verificaAutentificare');
@@ -49,12 +49,6 @@ app.get('/', (req, res) => {
   res.send('Alzheimer API funcționează!');
 });
 
-// Pornim serverul
-app.listen(port, () => {
-  console.log(`Serverul rulează pe http://localhost:${port}`);
-});
-
-
 
 app.use('/api', testRoutes);
 app.use("/api/fisa", fisaRoutes);
@@ -62,3 +56,7 @@ app.use("/api/fisa", fisaRoutes);
 //avatar//
 app.use("/uploads", express.static("uploads"))
 
+// Pornim serverul
+app.listen(port, () => {
+  console.log(`Serverul rulează pe http://localhost:${port}`);
+});
