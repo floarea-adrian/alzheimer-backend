@@ -43,7 +43,7 @@ module.exports = router;
 
 
 router.post('/', userController.registerUser);
-router.post('/login', userController.loginUser);
+router.post('/login', loginUser);
 router.post('/register',userController.registerUser);
 router.post('/pacient/test', verifyToken, allowRoles('pacient'),  userController.loginUser);
 router.post('/medic/test', verifyToken, allowRoles('medic'),  userController.loginUser);
